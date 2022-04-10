@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h2 class="text-primary my-3">Hi {{ details.FullName }},</h2>
+    <p class="mt-5">Below are the your BMI metrics and the planned target dates.</p>
+    <div class="card card-bordered mt-2">
+        <div class="card-body p-3">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <span class="h5 text-secondary">Height: <span class="text-primary">{{ details.Height }} cms</span></span>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <span class="h5 text-secondary">Weight: <span class="text-primary">{{ details.Weight }} kg</span></span>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <span class="h5 text-secondary">Current BMI: <span class="text-primary">{{ details.BMI }}</span></span>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <span class="h5 text-secondary">Target BMI: <span class="text-primary">{{ details.TargetBMI }}</span></span>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <span class="h5 text-secondary">Diet Target: <span class="text-primary">{{ details.TargetDays }} days</span></span>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <span class="h5 text-secondary">Age: <span class="text-primary">{{ details.Age }} years</span></span>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <span class="h5 text-secondary">Diet Plan Starts: <span class="text-primary">{{ details.DietStarts }}</span></span>
+                </div>
+                <div class="col-md-12">
+                    <span class="h5 text-secondary">Diet Plan Ends: <span class="text-primary">{{ details.DietEnds }}</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h4 class="text-dark mt-5">Today's Diet Plan</h4>
+    <div class="card card-bordered">
+        <div class="card-body p-3">
+            {% for my_diet in today_diet %}
+                <span class="p mr-3 text-dark">{{ my_diet.DietTime }} --> {{ my_diet.DietFood }}</span>
+                <hr>
+            {% endfor %}
+        </div>
+    </div>
+
+    <h3 class="text-primary text-center my-5">Updates for You!</h3>
+    <h4 class="text-dark mt-5">Best Time for Exercise:</h4>
+    <p class="text-secondary">This Is the Best Time  to Work Out, According to Science.Finding time to exercise can be challenging, and the most important thing is to squeeze in any amount of it whenever you can.</p>
+    <div class="card card-bordered mt-5">
+        <div class="card-body p-0">
+            <iframe width="394" height="320" style="border-radius: .5rem;"
+            src="https://www.youtube.com/embed/PsUay9QbC6c">
+            </iframe> 
+        </div>
+    </div>
+    <h4 class="text-dark mt-5">Planning for Terrace Garden:</h4>
+    <p class="text-secondary">Complete Construction Details is all about constructing a house in 30*40 site with all the details, day by day progress videos. So that it helps to understand how exactly a beautiful house is constructed.</p>
+    <div class="card card-bordered mt-5">
+        <div class="card-body p-0">
+            <iframe width="394" height="320" style="border-radius: .5rem;"
+            src="https://www.youtube.com/embed/q7z4gf9x5zo">
+            </iframe> 
+        </div>
+    </div>
+    
+
+{% endblock %}
+
+{% block menu %}
+    <div class="d-grid">
+        <div class="mt-auto btn-group" role="group" aria-label="menu_button">
+            <a href="/workout/" class="btn btn-primary"><i class="fa-solid fa-person-walking"></i> Workout</a>
+            <a href="/users/alert-notifications/" class="btn btn-primary"><i class="fa-solid fa-bell"></i> Alert</a>
+            <button type="button" class="btn btn-primary"><i class="fa-solid fa-utensils"></i> Diet</button>
+            <a href="/tereace-farm/" class="btn btn-primary"><i class="fa-solid fa-wheat-awn"></i> Farm</a>
+            <a href="/advisor/slot-booking/" class="btn btn-primary"><i class="fa-solid fa-people-group"></i> Advisor</a>
+        </div>
+    </div>
+    
+{% endblock %}

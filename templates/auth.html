@@ -1,0 +1,201 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="row h-100">
+        <div id="notification" role="alert" class="mb-5 alert card-alert text-center d-none"></div>
+        <div class="col-md-12 my-auto">
+            <div id="welcome_section" class="text-center">
+                <span class="avatar avatar-xxl avatar-circle my-5">
+                  <img class="avatar-img" src="/assets/img/apple-touch-icon.png" alt="logo">
+                </span>
+                <h1><span style="color: #520066">Food </span><span style="color:#79589F">Advisor</span></h1>
+                <p class="text-secondary mb-5">It's time to make yourself and your family heathy.</p>
+                <div class="d-grid pt-5">
+                    <button id="login_section_toggle" type="button" class="btn btn-primary btn-lg">
+                      Sign In
+                    </button>
+                    <p class="mt-3">Don't have an account,
+                        <span>
+                            <button id="registration_section_toggle" type="button" class="btn btn-link">Create an Account ?</button>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div id="login_section" class="d-none">
+                <div class="text-center mb-5 mb-md-7">
+                    <h1 class="h2 mb-3">Welcome Back</h1>
+                    <p>Login to manage your health routine.</p>
+                </div>
+                <form class="text-left js-validate needs-validation" novalidate="">
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <label class="form-label" for="email_id">Username</label>
+                        </div>
+                        <input id="email_id" type="email" class="form-control form-control-lg" name="email" placeholder="email@domain.com" aria-label="email@domain.com" required="">
+                        <div class="form-group">
+                            <p class="col-md-12 control-label mb-1" for="email_id"><span id="popover_email_id"
+                                    class="block-help small text-danger d-none">Please enter a valid username.</span></p>
+                        </div>
+                    </div>
+    
+                    <div class="mb-4">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <label class="form-label" for="current_password">Password</label>
+                      </div>
+      
+                      <div class="input-group input-group-merge" data-hs-validation-validate-class="">
+                        <input id="current_password" type="password" class="js-toggle-password form-control form-control-lg" name="password" placeholder="8+ characters required" aria-label="8+ characters required" required="" minlength="8" data-hs-toggle-password-options="{
+                               &quot;target&quot;: &quot;#changePassTarget&quot;,
+                               &quot;defaultClass&quot;: &quot;bi-eye-slash&quot;,
+                               &quot;showClass&quot;: &quot;bi-eye&quot;,
+                               &quot;classChangeTarget&quot;: &quot;#changePassIcon&quot;
+                             }">
+                        <a id="changePassTarget" class="input-group-append input-group-text" href="javascript:;">
+                          <i id="changePassIcon" class="bi-eye-slash"></i>
+                        </a>
+                      </div>
+                      <div class="form-group">
+                        <p class="col-md-12 control-label mb-1" for="current_password"><span id="popover_current_password"
+                                class="block-help small text-danger d-none">Please enter a valid password.</span></p>
+                      </div>
+                    </div>
+      
+                    <div class="d-grid mb-3">
+                      <button id="signin-btn-submit" type="button" class="btn btn-primary btn-lg">
+                        <span id="signin-btn-text" class="text-center">Sign In</span>
+                        <span class="text-center">
+                            <div id="lds-submit-loader" class="lds-ellipsis align-middle d-none">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </span>
+                      </button>
+                      <p class="mt-3">Don't have an account,
+                        <span>
+                            <button id="registration_section_toggle_signin" type="button" class="btn btn-link">Create an Account ?</button>
+                        </span>
+                      </p>
+                    </div>
+                   
+                  </form>
+            </div>
+
+            <div id="registration_section" class="d-none">
+                <div class="text-center mb-5 mb-md-7">
+                    <h1 class="h2 mb-3">Welcome</h1>
+                    <p>Register to manage your health routine.</p>
+                  </div>
+                <form id="registration_form" class="text-left js-validate needs-validation" novalidate="">
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <label class="form-label" for="full_name">Your Name</label>
+                        </div>
+                        <input id="full_name" type="text" class="form-control form-control-lg" name="full_name" placeholder="5+ characters required" required="">
+                        <div class="form-group">
+                            <p class="col-md-12 control-label mb-1 float-left" for="full_name"><span id="popover_full_name"
+                                    class="block-help small text-danger d-none">Your name should contain atleast 5 characters.</span></p>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <label class="form-label" for="new_email_id">Email address</label>
+                        </div>
+                        <input id="new_email_id" type="email" class="form-control form-control-lg" name="email" placeholder="email@domain.com" aria-label="email@domain.com" required="">
+                        <div class="form-group">
+                            <p class="col-md-12 control-label mb-1" for="email_id"><span id="popover_new_email_id"
+                                    class="block-help small text-danger d-none">Please enter a valid username.</span></p>
+                        </div>
+                    </div>
+    
+                    <div class="mb-4">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <label class="form-label" for="new-password">New Password</label>
+                      </div>
+      
+                      <div class="input-group input-group-merge" data-hs-validation-validate-class="">
+                        <input id="new_password" type="password" class="js-toggle-password form-control form-control-lg" name="password" placeholder="8+ characters required" aria-label="8+ characters required" required="" minlength="8" data-hs-toggle-password-options="{
+                               &quot;target&quot;: &quot;#changePassTarget&quot;,
+                               &quot;defaultClass&quot;: &quot;bi-eye-slash&quot;,
+                               &quot;showClass&quot;: &quot;bi-eye&quot;,
+                               &quot;classChangeTarget&quot;: &quot;#changePassIcon&quot;
+                             }">
+                        <a id="changePassTarget" class="input-group-append input-group-text" href="javascript:;">
+                          <i id="changePassIcon" class="bi-eye-slash"></i>
+                        </a>
+                      </div>
+                      <div class="form-group">
+                        <p class="col-md-12 control-label mb-1" for="new-password"><span id="popover_new_password"
+                                class="block-help small text-danger d-none">Please enter a valid password.</span></p>
+                      </div>  
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <label class="form-label" for="confirm_password">Confirm Password</label>
+                        </div>
+        
+                        <div class="input-group input-group-merge" data-hs-validation-validate-class="">
+                          <input id="confirm_password" type="password" class="js-toggle-password form-control form-control-lg" name="password" placeholder="8+ characters required" aria-label="8+ characters required" required="" minlength="8" data-hs-toggle-password-options="{
+                                 &quot;target&quot;: &quot;#changePassTarget&quot;,
+                                 &quot;defaultClass&quot;: &quot;bi-eye-slash&quot;,
+                                 &quot;showClass&quot;: &quot;bi-eye&quot;,
+                                 &quot;classChangeTarget&quot;: &quot;#changePassIcon&quot;
+                               }">
+                          <a id="changePassTarget" class="input-group-append input-group-text" href="javascript:;">
+                            <i id="changePassIcon" class="bi-eye-slash"></i>
+                          </a>
+                        </div>
+                        <div class="form-group">
+                          <p class="col-md-12 control-label mb-1" for="confirm_password"><span id="popover_confirm_password"
+                                  class="block-help small text-danger d-none">Please enter a valid password.</span></p>
+                        </div>  
+                      </div>
+      
+                    <div class="d-grid mb-3">
+                      <button id="register-btn-submit" type="button" class="btn btn-primary btn-lg">
+                        <span id="register-btn-text" class="text-center">Register</span>
+                        <span class="text-center">
+                            <div id="lds-register-loader" class="lds-ellipsis align-middle d-none">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </span>
+                      </button>
+                      <p class="mt-3">Already have an account,
+                        <span>
+                            <button id="login_section_toggle_register" type="button" class="btn btn-link">Sign In ?</button>
+                        </span>
+                      </p>
+                    </div>
+                   
+                  </form>
+            </div>
+            
+        </div>
+    </div>
+    
+
+{% endblock %}
+
+{% block scripts %}
+
+<script src="/assets/js/login.min.js"></script>
+<script>
+    (function() {
+
+      HSBsValidation.init('.js-validate', {
+        onSubmit: data => {
+          data.event.preventDefault()
+          alert('Submited')
+        }
+      })
+      
+    })()
+</script>
+
+{% endblock %}

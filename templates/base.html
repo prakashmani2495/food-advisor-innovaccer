@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html id="key" class="h-100" itemscope="" itemtype="https://schema.org/WebPage" lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <title>Food Advisor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="/assets/img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/bootstrap-icon.min.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/fontawsome/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <style>
+      .lds-ellipsis {
+        display: inline-block;
+        position: relative;
+        width: 70px;
+        height: 20px;
+      }
+      
+      .lds-ellipsis div {
+        position: absolute;
+        top: 6px;
+        width: 8px;
+        height: 8px;
+        border-radius: 40%;
+        background: #fff;
+        animation-timing-function: cubic-bezier(0, 1, 1, 0);
+      }
+      
+      .lds-ellipsis div:nth-child(1) {
+        left: 8px;
+        animation: lds-ellipsis1 0.6s infinite;
+      }
+      
+      .lds-ellipsis div:nth-child(2) {
+        left: 8px;
+        animation: lds-ellipsis2 0.6s infinite;
+      }
+      
+      .lds-ellipsis div:nth-child(3) {
+        left: 32px;
+        animation: lds-ellipsis2 0.6s infinite;
+      }
+      
+      .lds-ellipsis div:nth-child(4) {
+        left: 56px;
+        animation: lds-ellipsis3 0.6s infinite;
+      }
+      
+      
+      @keyframes lds-ellipsis1 {
+        0% {
+          transform: scale(0);
+        }
+      
+        100% {
+          transform: scale(1);
+        }
+      }
+      
+      @keyframes lds-ellipsis3 {
+        0% {
+          transform: scale(1);
+        }
+      
+        100% {
+          transform: scale(0);
+        }
+      }
+      
+      @keyframes lds-ellipsis2 {
+        0% {
+          transform: translate(0, 0);
+        }
+      
+        100% {
+          transform: translate(24px, 0);
+        }
+      }
+      ::selection {
+        background: #fff;
+        color: #79589F;
+      }
+      ::-moz-selection {
+        background: #fff;
+        color: #79589F;
+      }
+    </style>
+</head>
+  
+  <body class="d-flex align-items-center min-h-100">
+    <header id="header" class="navbar navbar-expand navbar-light navbar-absolute-top">
+      <div class="container-fluid">
+        <nav class="navbar-nav-wrap">
+          <a class="navbar-brand d-none d-lg-flex" href="#" aria-label="LaptopMentor">
+            <span class="h2 mt-3" style="color: #e1dfdf;">innovaccer</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <main id="content" role="main" class="flex-grow-1">
+      <div class="container-fluid">
+        <div class="row">
+          <div id="obstraction" class="col-lg-5 col-xl-5 d-none d-lg-flex justify-content-center align-items-center min-vh-lg-100 position-relative" style="background-image: url('/assets/img/wave-patter-light.svg'); background-color: #79589F;">
+            <div class="flex-grow-1 p-5">
+              <figure class="text-center">
+                  <figure class="text-center">
+                    <div class="avatar avatar-xxl avatar-circle my-4" style="background-color: #79589F;">
+                      <img class="avatar-img" src="/assets/img/apple-touch-icon.png" alt="logo">
+                    </div>
+                  </figure>
+                  <a class="display-5 h1 text-center" href="#" aria-label="FoodAdvisor">
+                    <span class="mt-3"><span class="text-white">Food </span><span style="color: #e1dfdf;">Advisor</span></span>
+                  </a>
+                <blockquote class="blockquote blockquote-light" style="color: #e1dfdf;">“ It's time to make yourself and your family heathy. ”</blockquote>
+              </figure>
+              <h3 class="text-white mt-5">Participant Details:</h3>
+              <ul class="list-pointer list-pointer-lg list-pointer-white" style="color: #e1dfdf;">
+                <li class="list-pointer-item" style="margin-bottom: 0px; padding-left: 1.75rem; color: #eceaea;">Prakash Mani(mprakash2495@gmail.com), Ansio Solutions Pvt Ltd.</li>
+                <li class="list-pointer-item" style="margin-bottom: 0px; padding-left: 1.75rem;color: #eceaea;"><a  style="color: #eceaea;" href="https://www.linkedin.com/in/prakash-mani/" target="_blank">https://www.linkedin.com/in/prakash-mani/</a></li>
+              </ul>
+              <h3 class="text-white mt-5">Problem Statement:</h3>
+              <p style="color: #eceaea;">&emsp;&emsp;As we all know Health is Wealth, but now a days its difficult to take healthy organic food. Since most of we eat at hotels, restaurants, and even the vegetables we bought from the markets are fertilized, preserved with chemical contents that leads to unhealthy condition in a longer period.</p>
+              <h3 class="text-white mt-5">Solution:</h3>
+              <p style="color: #eceaea;">&emsp;&emsp;Food Advisor app helps to suggest heathy foods or ingredients and the amount of quantity based on current health condition in a way that will enhance and normalize the nutrient, protient, mineral contents on daily basis and alert system helps user to take food at correct time.</p>
+              <p style="color: #eceaea;">&emsp;&emsp;Also app provide suggestion to grow vegetables in terrace or bolcony with natural / organic fertilizers. In this method, user will get pure organic vegetables on their own.</p>
+              <p class="mt-5 pt-3" style="color: #e1dfdf;">--> Use this mobile view on desktop to get a better mobile aesthetic and experience.</p>  
+            </div>
+          </div>
+          <div class="col-lg-6 col-xl-7 d-flex justify-content-center align-items-center min-vh-lg-100">
+            <div id="home_section" class="flex-grow-1 mx-auto" style="max-width: 28rem;">
+              <div class="card shadow-lg p-3 mb-5 bg-white rounded-lg" style="border-radius: 3rem; height: 90vh">
+                <div class="card-header" style="padding: .3rem;">
+                  <h3 class="card-header-title text-center text-secondary"><i class="bi bi-dot"></i><i class="bi bi-dash-lg"></i><i class="bi bi-dash-lg"></i><i class="bi bi-dash-lg"></i><i class="bi bi-dot"></i></h3>
+                  <hr>
+                </div>
+                <div class="card-body" style="padding: .3rem;overflow-x: hidden; overflow-y:auto">
+                  {% block content %}
+
+                  {% endblock %}
+                </div>
+                <div class="card-footer text-center text-secondary" style="padding: .3rem;">
+                  {% block menu %}
+
+                  {% endblock %}
+                  <hr>
+                  <span class="px-5 float-left"><i class="bi bi-square-fill"></i></span>
+                  <a class="text-center text-secondary" href="/" aria-label="Home">
+                    <span class="px-5 text-center text-secondary"><i class="bi bi-circle-fill"></i></span>
+                  </a>
+                  <a class="text-center text-secondary" href="javascript:;" aria-label="Home">
+                    <span class="px-5 float-right h3 text-secondary" onclick="logout()"><i class="bi bi-caret-left-fill"></i></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+
+    <script src="/assets/js/vendor.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/fontawsome/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    {% block scripts %}
+
+    {% endblock %}
+    <script>
+      function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+      }
+      
+      function getHeader() {
+        return {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          'X-CSRF-ID': readCookie('X-CSRF-ID'),
+        }
+      }
+      
+      function getUploadHeader() {
+        return {
+          'X-CSRF-ID': readCookie('X-CSRF-ID'),
+        }
+      }
+      
+      function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+          vars[key] = value;
+        });
+        return vars;
+      }
+      
+      function getUrlParam(parameter, defaultvalue) {
+        var urlparameter = defaultvalue;
+        if (window.location.href.indexOf(parameter) > -1) {
+          urlparameter = getUrlVars()[parameter];
+        }
+        return urlparameter;
+      }
+      
+      function createCookie(name, value, days) {
+        var expires;
+      
+        if (days) {
+          var date = new Date();
+          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+          expires = "; expires=" + date.toGMTString();
+        } else {
+          expires = "";
+        }
+        document.cookie = encodeURIComponent(name) + "=" + encodeURIComponent(value) + expires + "; path=/";
+      }
+      
+      
+      function eraseCookie(name) {
+        createCookie(name, "", -1);
+      }
+
+      function logout(){
+        $('#loader-overlay-text').text('Logging you Out...')
+        $('#loader-overlay').removeClass('d-none');
+        $.ajax({
+          type: "GET",
+          headers: getHeader(),
+          url: "/users/api/logout/",
+          success: function (response) {
+            if (response[0]['logout'] == 'success') {
+              window.location.href = '/';
+            }
+          }
+        });
+      }
+    </script>
+  </body>
+
+</html>

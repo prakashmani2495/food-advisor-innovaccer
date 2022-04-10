@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h2 class="text-center text-primary">Workouts</h2>
+    <h4 class="text-dark mt-5">Daily Exercise Routines:</h4>
+    <p class="text-secondary">This is a 20 minute beginner’s full body workout routine for both men and women that you can do with minimum equipment at home. Of course, the gyms have now been open but how really safe are they is questionable.</p>
+    <div class="card card-bordered mt-5">
+        <div class="card-body p-0">
+            <iframe width="394" height="320" style="border-radius: .5rem;"
+            src="https://www.youtube.com/embed/AzV3EA-1-yM">
+            </iframe> 
+        </div>
+    </div>
+    
+    <h4 class="text-dark mt-5">Best Time for Exercise:</h4>
+    <p class="text-secondary">This Is the Best Time  to Work Out, According to Science.Finding time to exercise can be challenging, and the most important thing is to squeeze in any amount of it whenever you can. But if you want to optimize your workouts to get the widest range of benefits, you might want to try exercising in the morning.</p>
+    <div class="card card-bordered mt-5">
+        <div class="card-body p-0">
+            <iframe width="394" height="320" style="border-radius: .5rem;"
+            src="https://www.youtube.com/embed/PsUay9QbC6c">
+            </iframe> 
+        </div>
+    </div>
+
+    <h4 class="text-dark mt-5">Daily Yoga Routines:</h4>
+    <p class="text-secondary">This is a 15 minute beginner’s daily yoga routine. With gyms and offices shutting down, this video is focussed on utilising our precious time into a higher purpose of learning yoga.</p>
+    <div class="card card-bordered mt-5">
+        <div class="card-body p-0">
+            <iframe width="394" height="320" style="border-radius: .5rem;"
+            src="https://www.youtube.com/embed/s2NQhpFGIOg">
+            </iframe> 
+        </div>
+    </div>
+    
+    <h4 class="text-dark mt-5">Right Time for Yoga:</h4>
+    <p class="text-secondary">Everyone are so aware that yoga is very important in our lives today. But do we know what is the right time to do yoga. The best time to practice yoga is during the morning time. We call it traditionally as brahmimuhurtha between 3.30 to 5’o clock.</p>
+    <div class="card card-bordered mt-5">
+        <div class="card-body p-0">
+            <iframe width="394" height="320" style="border-radius: .5rem;"
+            src="https://www.youtube.com/embed/7Qnv3miYtSU">
+            </iframe> 
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block menu %}
+    <div class="d-grid">
+        <div class="mt-auto btn-group" role="group" aria-label="menu_button">
+            <button type="button" class="btn btn-primary"><i class="fa-solid fa-person-walking"></i> Workout</button>
+            <a href="/users/alert-notifications/" class="btn btn-primary"><i class="fa-solid fa-bell"></i> Alert</a>
+            <button type="button" class="btn btn-primary"><i class="fa-solid fa-utensils"></i> Diet</button>
+            <a href="/tereace-farm/" class="btn btn-primary"><i class="fa-solid fa-wheat-awn"></i> Farm</a>
+            <a href="/advisor/slot-booking/" class="btn btn-primary"><i class="fa-solid fa-people-group"></i> Advisor</a>
+        </div>
+    </div>
+    
+{% endblock %}

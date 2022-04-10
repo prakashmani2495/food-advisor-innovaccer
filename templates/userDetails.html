@@ -1,0 +1,290 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="row text-left h-100">
+        <div class="col-md-12 text-left my-auto">
+            <h2 class="text-primary pb-5">Share below details to prepare your personalized Food routine.</h2>
+            <form id="user_details" class="js-validate needs-validation" novalidate="">
+                <div class="mb-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <label class="form-label" for="user_age">What's your Age?</label>
+                    </div>
+                    <div class="quantity-counter">
+                        <div class="js-quantity-counter row align-items-center">
+                            <div class="col">
+                                <span class="d-block small">Select age</span>
+                                <input id="user_age" class="js-result form-control form-control-quantity-counter" type="text" value="18" onkeydown="return false">
+                            </div>                  
+                            <div class="col-auto">
+                                <a id="js-minus-age" class="js-minus btn btn-outline-secondary btn-xs btn-icon rounded-circle" href="javascript:;">
+                                <svg width="8" height="2" viewBox="0 0 8 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 1C0 0.723858 0.223858 0.5 0.5 0.5H7.5C7.77614 0.5 8 0.723858 8 1C8 1.27614 7.77614 1.5 7.5 1.5H0.5C0.223858 1.5 0 1.27614 0 1Z" fill="currentColor"/>
+                                </svg>
+                                </a>
+                                <a id="js-plus-age" class="js-plus btn btn-outline-secondary btn-xs btn-icon rounded-circle" href="javascript:;">
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 0C4.27614 0 4.5 0.223858 4.5 0.5V3.5H7.5C7.77614 3.5 8 3.72386 8 4C8 4.27614 7.77614 4.5 7.5 4.5H4.5V7.5C4.5 7.77614 4.27614 8 4 8C3.72386 8 3.5 7.77614 3.5 7.5V4.5H0.5C0.223858 4.5 0 4.27614 0 4C0 3.72386 0.223858 3.5 0.5 3.5H3.5V0.5C3.5 0.223858 3.72386 0 4 0Z" fill="currentColor"/>
+                                </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="user_gender" class="mb-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <label class="form-label" for="user_age">What's your Gender?</label>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm mb-2 mb-sm-0">
+                            <label class="form-control" for="male">
+                                <span class="form-check">
+                                <input type="radio" class="form-check-input" name="user_gender" id="male" value="male">
+                                <span class="form-check-label">Male</span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="col-sm mb-2 mb-sm-0">
+                            <label class="form-control" for="female">
+                                <span class="form-check">
+                                <input type="radio" class="form-check-input" name="user_gender" id="female" value="female">
+                                <span class="form-check-label">Female</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <p class="col-md-12 control-label mb-1" for="user_gender"><span id="popover_user_gender"
+                                class="block-help small text-danger d-none">Please select your gender.</span></p>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <label class="form-label" for="user_height">What's your Height?</label>
+                    </div>
+                    <div class="quantity-counter">
+                        <div class="js-quantity-counter row align-items-center">
+                            <div class="col">
+                                <span class="d-block small">Select height in centimeter</span>
+                                <input id="user_height" class="js-result form-control form-control-quantity-counter" type="text" value="152" onkeydown="return false">
+                            </div>                  
+                            <div class="col-auto">
+                                <a id="js-minus-height" class="js-minus btn btn-outline-secondary btn-xs btn-icon rounded-circle" href="javascript:;">
+                                <svg width="8" height="2" viewBox="0 0 8 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 1C0 0.723858 0.223858 0.5 0.5 0.5H7.5C7.77614 0.5 8 0.723858 8 1C8 1.27614 7.77614 1.5 7.5 1.5H0.5C0.223858 1.5 0 1.27614 0 1Z" fill="currentColor"/>
+                                </svg>
+                                </a>
+                                <a id="js-plus-height" class="js-plus btn btn-outline-secondary btn-xs btn-icon rounded-circle" href="javascript:;">
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 0C4.27614 0 4.5 0.223858 4.5 0.5V3.5H7.5C7.77614 3.5 8 3.72386 8 4C8 4.27614 7.77614 4.5 7.5 4.5H4.5V7.5C4.5 7.77614 4.27614 8 4 8C3.72386 8 3.5 7.77614 3.5 7.5V4.5H0.5C0.223858 4.5 0 4.27614 0 4C0 3.72386 0.223858 3.5 0.5 3.5H3.5V0.5C3.5 0.223858 3.72386 0 4 0Z" fill="currentColor"/>
+                                </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <label class="form-label" for="user_weight">What's your Weight?</label>
+                    </div>
+                    <div class="quantity-counter">
+                        <div class="js-quantity-counter row align-items-center">
+                            <div class="col">
+                                <span class="d-block small">Select weight in kilogram</span>
+                                <input id="user_weight" class="js-result form-control form-control-quantity-counter" type="text" value="25" onkeydown="return false">
+                            </div>                  
+                            <div class="col-auto">
+                                <a id="js-minus-weight" class="js-minus btn btn-outline-secondary btn-xs btn-icon rounded-circle" href="javascript:;">
+                                <svg width="8" height="2" viewBox="0 0 8 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 1C0 0.723858 0.223858 0.5 0.5 0.5H7.5C7.77614 0.5 8 0.723858 8 1C8 1.27614 7.77614 1.5 7.5 1.5H0.5C0.223858 1.5 0 1.27614 0 1Z" fill="currentColor"/>
+                                </svg>
+                                </a>
+                                <a id="js-plus-weight" class="js-plus btn btn-outline-secondary btn-xs btn-icon rounded-circle" href="javascript:;">
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 0C4.27614 0 4.5 0.223858 4.5 0.5V3.5H7.5C7.77614 3.5 8 3.72386 8 4C8 4.27614 7.77614 4.5 7.5 4.5H4.5V7.5C4.5 7.77614 4.27614 8 4 8C3.72386 8 3.5 7.77614 3.5 7.5V4.5H0.5C0.223858 4.5 0 4.27614 0 4C0 3.72386 0.223858 3.5 0.5 3.5H3.5V0.5C3.5 0.223858 3.72386 0 4 0Z" fill="currentColor"/>
+                                </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="user_activity" class="mb-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <label class="form-label" for="user_activity">How active are you?</label>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 pb-3 mb-sm-0">
+                            <label class="form-control" for="sitting">
+                                <span class="form-check">
+                                <input type="radio" class="form-check-input" name="user_activity" id="sitting" value="sitting">
+                                <span class="form-check-label">Mostly sitting throught the day</span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="col-12 pb-3 mb-sm-0">
+                            <label class="form-control" for="standing">
+                                <span class="form-check">
+                                <input type="radio" class="form-check-input" name="user_activity" id="standing" value="standing">
+                                <span class="form-check-label">Mostly standing through the day</span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="col-12 pb-3 mb-sm-0">
+                            <label class="form-control" for="walking">
+                                <span class="form-check">
+                                <input type="radio" class="form-check-input" name="user_activity" id="walking" value="walking">
+                                <span class="form-check-label">Mostly walking through the day</span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="col-12 pb-3 mb-sm-0">
+                            <label class="form-control" for="physical-work">
+                                <span class="form-check">
+                                <input type="radio" class="form-check-input" name="user_activity" id="physical-work" value="physical-work">
+                                <span class="form-check-label">Mostly physical work through the day</span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="col-12 pb-3 mb-sm-0">
+                            <label class="form-control" for="in-front-of-computer">
+                                <span class="form-check">
+                                <input type="radio" class="form-check-input" name="user_activity" id="in-front-of-computer" value="in-front-of-computer">
+                                <span class="form-check-label">Mostly in-front of computer through the day</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <p class="col-md-12 control-label mb-1" for="user_activity"><span id="popover_user_activity"
+                                class="block-help small text-danger d-none">Please select atleast one option.</span></p>
+                    </div>
+                </div>
+                <div id="user_medical" class="mb-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <label class="form-label" for="user_medical">Any Medical Condition we should be aware of?</label>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm pb-3 mb-sm-0">
+                            <label class="form-control" for="none">
+                                <span class="form-check">
+                                <input type="checkbox" class="form-check-input" name="user_medical" id="none" value="none">
+                                <span class="form-check-label">None</span>
+                                </span>
+                            </label>
+                        </div>
+                    
+                        <div class="col-sm pb-3 mb-sm-0">
+                            <label class="form-control" for="diabeties">
+                                <span class="form-check">
+                                <input type="checkbox" class="form-check-input" name="user_medical" id="diabeties" value="diabeties">
+                                <span class="form-check-label">Diabeties</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm pb-3 mb-sm-0">
+                            <label class="form-control" for="ulcer">
+                                <span class="form-check">
+                                <input type="checkbox" class="form-check-input" name="user_medical" id="ulcer" value="ulcer">
+                                <span class="form-check-label">Ulcer</span>
+                                </span>
+                            </label>
+                        </div>
+                    
+                        <div class="col-sm pb-3 mb-sm-0">
+                            <label class="form-control" for="thyroid">
+                                <span class="form-check">
+                                <input type="checkbox" class="form-check-input" name="user_medical" id="thyroid" value="thyroid">
+                                <span class="form-check-label">Thyroid</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm pb-3 mb-sm-0">
+                            <label class="form-control" for="hypertension">
+                                <span class="form-check">
+                                <input type="checkbox" class="form-check-input" name="user_medical" id="hypertension" value="hypertension">
+                                <span class="form-check-label">Hypertension</span>
+                                </span>
+                            </label>
+                        </div>
+                    
+                        <div class="col-sm pb-3 mb-sm-0">
+                            <label class="form-control" for="cholestrol">
+                                <span class="form-check">
+                                <input type="checkbox" class="form-check-input" name="user_medical" id="cholestrol" value="cholestrol">
+                                <span class="form-check-label">Cholestrol</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm pb-3 mb-sm-0">
+                            <label class="form-control" for="physical-injury">
+                                <span class="form-check">
+                                <input type="checkbox" class="form-check-input" name="user_medical" id="physical-injury" value="physical-injury">
+                                <span class="form-check-label">Physical Injury</span>
+                                </span>
+                            </label>
+                        </div>
+                    
+                        <div class="col-sm pb-3 mb-sm-0">
+                            <label class="form-control" for="stress">
+                                <span class="form-check">
+                                <input type="checkbox" class="form-check-input" name="user_medical" id="stress" value="stress">
+                                <span class="form-check-label">Stress</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm pb-3 mb-sm-0">
+                            <label class="form-control" for="anxiety">
+                                <span class="form-check">
+                                <input type="checkbox" class="form-check-input" name="user_medical" id="anxiety" value="anxiety">
+                                <span class="form-check-label">Anxiety</span>
+                                </span>
+                            </label>
+                        </div>
+                    
+                        <div class="col-sm pb-3 mb-sm-0">
+                            <label class="form-control" for="depression">
+                                <span class="form-check">
+                                <input type="checkbox" class="form-check-input" name="user_medical" id="depression" value="depression">
+                                <span class="form-check-label">Depression</span> 
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <p class="col-md-12 control-label mb-1" for="user_medical"><span id="popover_user_medical"
+                                class="block-help small text-danger d-none">Please select atleast one option.</span></p>
+                    </div>
+                </div>
+                <div class="d-grid py-5">
+                    <button id="submit-user-details" type="button" class="btn btn-primary btn-lg">
+                        <span id="submit-btn-text" class="text-center">Submit</span>
+                        <span class="text-center">
+                            <div id="lds-submit-loader" class="lds-ellipsis align-middle d-none">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock %} 
+
+
+
+{% block scripts %}
+<script src="/assets/js/user_details.min.js"></script>
+
+{% endblock %}

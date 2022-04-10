@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h2 class="text-center text-primary">Notifications</h2>
+    <div class="row text-left mt-5">
+        <div class="col-md-12 text-left my-auto">
+            <h5 class="text-dark pb-5">Please select the checkbox for which you want daily alert notification.</h5>
+            <form id="user_details" class="js-validate needs-validation" novalidate="">
+                
+                <div id="user_medical" class="mb-3">
+                    <div class="row">
+                        <div class="col-12 pb-3 mb-sm-0">
+                            <label class="form-control" for="workout">
+                                <span class="form-check">
+                                <input type="checkbox" class="form-check-input" name="user_alert" id="workout" value="workout">
+                                <span class="form-check-label">Workout</span>
+                                </span>
+                            </label>
+                        </div>
+                    
+                        <div class="col-12 pb-3 mb-sm-0">
+                            <label class="form-control" for="diet">
+                                <span class="form-check">
+                                <input type="checkbox" class="form-check-input" name="user_alert" id="diet" value="diet">
+                                <span class="form-check-label">Diet / Food Routines</span>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="col-12 pb-3 mb-sm-0">
+                            <label class="form-control" for="farm">
+                                <span class="form-check">
+                                <input type="checkbox" class="form-check-input" name="user_alert" id="farm" value="farm">
+                                <span class="form-check-label">Tereace Farming</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <p class="col-md-12 control-label mb-1" for="user_alert"><span id="popover_user_alert"
+                                class="block-help small text-danger d-none">Please select atleast one option.</span></p>
+                    </div>
+                </div>
+                <div class="d-grid py-5">
+                    <button id="submit-user-alert" type="button" class="btn btn-primary btn-lg">
+                        <span id="submit-btn-text" class="text-center">Schedule Notification</span>
+                        <span class="text-center">
+                            <div id="lds-submit-loader" class="lds-ellipsis align-middle d-none">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+
+{% endblock %}
+
+{% block menu %}
+    <div class="d-grid">
+        <div class="mt-auto btn-group" role="group" aria-label="menu_button">
+            <a href="/workout/" class="btn btn-primary"><i class="fa-solid fa-person-walking"></i> Workout</a>
+            <button type="button" class="btn btn-primary"><i class="fa-solid fa-bell"></i> Alert</button>
+            <button type="button" class="btn btn-primary"><i class="fa-solid fa-utensils"></i> Diet</button>
+            <a href="/tereace-farm/" class="btn btn-primary"><i class="fa-solid fa-wheat-awn"></i> Farm</a>
+            <a href="/advisor/slot-booking/" class="btn btn-primary"><i class="fa-solid fa-people-group"></i> Advisor</a>
+        </div>
+    </div>
+    
+{% endblock %}

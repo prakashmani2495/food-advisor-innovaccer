@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h2 class="text-center text-primary">Book a Slot</h2>
+    <div class="row text-left mt-5">
+        <div class="col-md-12 text-left my-auto">
+            <h5 class="text-dark pb-5">Please choose a slot to book a meeting with Advisors.</h5>
+            <form id="user_details" class="js-validate needs-validation" novalidate="">
+                
+                <div id="slot_booking" class="mb-3">
+                    <div class="row">
+                        <div class="col-12 pb-3 mb-sm-0">
+                            <label class="form-control" for="dietitian">
+                                <span class="form-check">
+                                <input type="checkbox" class="form-check-input" name="user_alert" id="dietitian" value="dietitian">
+                                <span class="form-check-label">Dietitian</span>
+                                </span>
+                                <div class="form-group mt-3">
+                                    <div id="dietition_date" class="js-flatpickr flatpickr-custom input-group"
+                                         data-hs-flatpickr-options='{
+                                          "appendTo": "#dietition_date",
+                                          "dateFormat": "d/m/Y",
+                                          "wrap": true
+                                        }'>
+                                      <div class="input-group-prepend input-group-text" data-bs-toggle>
+                                        <i class="bi-calendar-week"></i>
+                                      </div>
+                                      <input type="text" class="flatpickr-custom-form-control form-control" id="dietition_date" placeholder="Select date" data-input value="">
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    
+                        <div class="col-12 pb-3 mb-sm-0">
+                            <label class="form-control" for="yoga-teacher">
+                                <span class="form-check">
+                                <input type="checkbox" class="form-check-input" name="user_alert" id="yoga-teacher" value="yoga-teacher">
+                                <span class="form-check-label">Yoga Techer</span>
+                                </span>
+                                <div class="form-group mt-3">
+                                    <div id="dietition_date" class="js-flatpickr flatpickr-custom input-group"
+                                         data-hs-flatpickr-options='{
+                                          "appendTo": "#dietition_date",
+                                          "dateFormat": "d/m/Y",
+                                          "wrap": true
+                                        }'>
+                                      <div class="input-group-prepend input-group-text" data-bs-toggle>
+                                        <i class="bi-calendar-week"></i>
+                                      </div>
+                                      <input type="text" class="flatpickr-custom-form-control form-control" id="dietition_date" placeholder="Select date" data-input value="">
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="col-12 pb-3 mb-sm-0">
+                            <label class="form-control" for="gym-trainer">
+                                <span class="form-check">
+                                <input type="checkbox" class="form-check-input" name="user_alert" id="gym-trainer" value="gym-trainer">
+                                <span class="form-check-label">Gym Trainer</span>
+                                </span>
+                                <div class="form-group mt-3">
+                                    <div id="dietition_date" class="js-flatpickr flatpickr-custom input-group"
+                                         data-hs-flatpickr-options='{
+                                          "appendTo": "#dietition_date",
+                                          "dateFormat": "d/m/Y",
+                                          "wrap": true
+                                        }'>
+                                      <div class="input-group-prepend input-group-text" data-bs-toggle>
+                                        <i class="bi-calendar-week"></i>
+                                      </div>
+                                      <input type="text" class="flatpickr-custom-form-control form-control" id="dietition_date" placeholder="Select date" data-input value="">
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <p class="col-md-12 control-label mb-1" for="user_alert"><span id="popover_user_alert"
+                                class="block-help small text-danger d-none">Please select atleast one option.</span></p>
+                    </div>
+                </div>
+                <div class="d-grid py-5">
+                    <button id="submit-user-alert" type="button" class="btn btn-primary btn-lg">
+                        <span id="submit-btn-text" class="text-center">Book Meeting</span>
+                        <span class="text-center">
+                            <div id="lds-submit-loader" class="lds-ellipsis align-middle d-none">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+
+{% endblock %}
+
+{% block menu %}
+    <div class="d-grid">
+        <div class="mt-auto btn-group" role="group" aria-label="menu_button">
+            <a href="/workout/" class="btn btn-primary"><i class="fa-solid fa-person-walking"></i> Workout</a>
+            <a href="/users/alert-notifications/" class="btn btn-primary"><i class="fa-solid fa-bell"></i> Alert</a>
+            <button type="button" class="btn btn-primary"><i class="fa-solid fa-utensils"></i> Diet</button>
+            <a href="/tereace-farm/" class="btn btn-primary"><i class="fa-solid fa-wheat-awn"></i> Farm</a>
+            <button type="button" class="btn btn-primary"><i class="fa-solid fa-people-group"></i> Advisor</button>
+        </div>
+    </div>
+    
+{% endblock %}
+
+{% block scripts %}
+
+    <script>
+        
+  (function() {
+    // INITIALIZATION OF FLATPICKR
+    // =======================================================
+    HSCore.components.HSFlatpickr.init('.js-flatpickr')
+  });
+
+    </script>
+
+{% endblock %}
