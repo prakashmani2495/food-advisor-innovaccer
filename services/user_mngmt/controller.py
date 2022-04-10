@@ -37,7 +37,6 @@ async def home(request: Request, Authorize: AuthJWT = Depends()):
     chck: dict = await check_user_details(Authorize.get_jwt_subject())
     if chck:
         diet = await today_diet_plan(Authorize.get_jwt_subject())
-        print(diet)
         return TEMPLATE.TemplateResponse('dashboard.html', context={"request": request, "details": chck, "today_diet":diet})
     else:
         return RedirectResponse('/users/details/', status_code=status.HTTP_307_TEMPORARY_REDIRECT)

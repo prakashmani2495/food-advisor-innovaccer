@@ -79,9 +79,6 @@ async def update_user_details(user_id: str, age: int, gender: str, height: int, 
     p_medical: str = ",".join(medical)
     p_activity: str = ",".join(activity)
     p_bmi = weight/((height*0.01)*(height*0.01))
-    print(weight)
-    print(height)
-    print(p_bmi)
     sql: str = 'call SP_UpdateUserDetails("{}", {}, "{}", {}, {}, "{}", "{}", {});'.format(user_id, age, gender, height, weight, p_activity, p_medical, p_bmi)
     res = await db_execute(database=DATABASE, query=sql, out='dict')
     if res:
